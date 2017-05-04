@@ -1,5 +1,4 @@
-angular.module('sane', ['ui.router'])
-
+angular.module('sideboard', ['ui.router'])
 .config(function($stateProvider, $urlRouterProvider){
 
   $urlRouterProvider.otherwise('/');

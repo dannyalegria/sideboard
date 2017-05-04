@@ -44,4 +44,4 @@ gulp.task('watch', function() {
 	gulp.watch(paths.indexSource, ['index']);
 });
 
-gulp.task('default', ['build', 'watch', 'serve']); // add 'serve' to the array if you want gulp to run nodemon as well.
+gulp.task('default', ['build', 'watch']); // add 'serve' to the array if you want gulp to run nodemon as well.

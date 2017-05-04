@@ -104,7 +104,7 @@ a {
   flex-basis: 100%;
 
 	//NOTE This style is for testing purposes only. Remove when done. NOTE//
-  
+
 	background-color: grey;
 	border: solid 2px black;
 	height: 100px;
@@ -123,4 +123,80 @@ a {
 // 8.) Components:
 // ~~~~~~~~~~~~~~~~
 
-/* Buttons */
+/* Navigation */
+
+// NOTE Just add class and remove class on hamburger click. None of all that nonsense bullshit.
+
+navigation {
+	.large-screen-nav{
+		display: flex;
+		justify-content: center;
+		height: 65px;
+		width: 100%;
+		background-color: black;
+		color: white;
+		border: solid red 5px;
+		ul {
+			width: 70%;
+			border: solid green 5px;
+			padding: 0;
+			margin: 0;
+			list-style-type: none;
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			li {
+				border: solid cyan 5px;
+			}
+		}
+	}
+	.small-screen-nav{
+		display: none;
+		flex-direction: column;
+		justify-content: flex-end;
+		width: 100%;
+		background-color: black;
+		color: white;
+		border: solid red 5px;
+		.hamburger {
+			display: flex;
+			justify-content: flex-end;
+			background-color: black;
+			color: white;
+			align-items: center;
+			padding: 20px;
+			font-size: 1.75em;
+			cursor: pointer;
+		}
+		.hamburger-dropdown {
+			flex-direction: column;
+			list-style-type: none;
+			width: 100%;
+			padding: 0;
+			li {
+				width: 100%;
+				justify-content: center;
+				border: solid cyan 5px;
+				a {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+				}
+			}
+		}
+	}
+}
+
+.hidden {
+	display: none;
+}
+
+
+@media screen and (max-width: 800px){
+	.large-screen-nav{
+		display: none !important;
+	}
+	.small-screen-nav{
+		display: flex !important;
+	}
+}
